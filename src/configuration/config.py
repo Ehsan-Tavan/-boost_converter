@@ -5,6 +5,7 @@ from pathlib import Path
 class BaseConfig:
     def __init__(self):
         self.parser = argparse.ArgumentParser()
+        self.add_arguments()
 
     def add_arguments(self):
         self.parser.add_argument("--data_dir", type=str, help="",

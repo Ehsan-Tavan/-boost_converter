@@ -17,5 +17,8 @@ class BaseConfig:
         self.parser.add_argument("--data_headers", type=list, help="",
                                  default=["VO", "DVO",	"IL", "DIL", "E", "DE",	"U=Target"])
 
+        self.parser.add_argument("--normalizer_type", type=str, help="StandardScaler, MinMaxScaler",
+                                 default="StandardScaler")
+
     def get_config(self):
         return self.parser.parse_args()

@@ -10,5 +10,8 @@ class BaseConfig:
         self.parser.add_argument("--data_dir", type=str, help="",
                                  default=Path(__file__).parents[2].__str__() + "/data/")
 
+        self.parser.add_argument("--data_file", type=str, help="",
+                                 default="Data_DCDC_Converter.xlsx")
+
     def get_config(self):
         return self.parser.parse_args()

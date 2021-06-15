@@ -14,5 +14,8 @@ class BaseConfig:
         self.parser.add_argument("--data_file", type=str, help="",
                                  default="Data_DCDC_Converter.xlsx")
 
+        self.parser.add_argument("--data_headers", type=list, help="",
+                                 default=["VO", "DVO",	"IL", "DIL", "E", "DE",	"U=Target"])
+
     def get_config(self):
         return self.parser.parse_args()

@@ -27,5 +27,5 @@ if __name__ == '__main__':
     df = load_excel(path, headers)
     print(df.head())
     data_scaled = normalizer(df, args.normalizer_type)
-    print(data_scaled.head())
+    data_scaled.to_excel("tt.xlsx", index=False)
 
